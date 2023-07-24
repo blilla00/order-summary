@@ -1,0 +1,179 @@
+/* Andy Bell's Modern CSS Reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Personal Additions to complete FE mentor challenge */
+
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+}
+
+body {
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-repeat: repeat-x;
+    background-size: auto;
+    
+    font-size: 16px;
+    font-family: 'Red Hat Display', sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main {
+    max-width: 20em;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border: 1px solid black;
+}
+
+.summary-hero img {
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+
+.summary-title, .summary-tagline {
+    text-align: center;
+    margin: .8em; 
+}
+
+.summary-title {
+    font-weight: 900;
+}
+
+.summary-tagline {
+    font-weight: 500;
+    opacity: 60%;
+}
+
+.summary-change-plan {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 1em;
+    background-color: var(--pale-blue);    
+}
+
+.plan-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.plan-name {
+    font-size: .8em;
+}
+
+.plan-price {
+    font-size: .8em;
+}
+
+.summary-change-plan a {
+    font-size: .8em;
+    text-decoration: underline;
+}
+
+.summary-close {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;   
+}
+
+.proceed {
+  padding: 1em 4em;
+  margin-bottom: 1em;
+  color: white;
+  font-weight: 700;
+  background-color: var(--bright-blue);
+  border-radius: 1em;
+  text-align: center;
+  box-shadow: 0 .75em .5em var(--pale-blue)
+}
+
+.cancel {
+  padding-top: 1em;
+}
+
+a {
+  text-decoration: inherit;
+}
