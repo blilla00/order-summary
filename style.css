@@ -80,12 +80,15 @@ select {
 :root {
     --pale-blue: hsl(225, 100%, 94%);
     --bright-blue: hsl(245, 75%, 52%);
+    --desat-blue: hsl(224, 23%, 55%);
+    --very-plae-blue: hsl(225, 100%, 98%);
 }
 
 body {
     background-image: url(./images/pattern-background-desktop.svg);
-    background-repeat: repeat-x;
-    background-size: auto;
+    background-repeat: no-repeat;
+    background-size: contain; 
+    background-color: var(--pale-blue);
     
     font-size: 16px;
     font-family: 'Red Hat Display', sans-serif;
@@ -97,10 +100,13 @@ body {
 }
 
 main {
-    max-width: 20em;
-    border-bottom-left-radius: 1em;
-    border-bottom-right-radius: 1em;
+   /* 20em is the desired component width on mobile devices /*
+   /* max-width: 20em; */
+    margin: 1em;   
+    max-width: 24em;
+    border-radius: 1em;
     border: 1px solid black;
+    background-color: white;
 }
 
 .summary-hero img {
@@ -110,27 +116,30 @@ main {
 
 .summary-title, .summary-tagline {
     text-align: center;
-    margin: .8em; 
 }
 
 .summary-title {
     font-weight: 900;
+   /* margin: .8em .8em 0 .8em; */
+    margin: 1.5em 3em;
+    margin-bottom: .5em;
 }
 
 .summary-tagline {
     font-weight: 500;
     opacity: 60%;
+    margin: 0 3em 1em;
 }
 
 .summary-change-plan {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     margin: 1em;
     padding: 1em;
     border-radius: 1em;
-    background-color: var(--pale-blue);    
+    background-color: rgba(224, 232, 255, .25);        
 }
 
 .plan-info {
@@ -144,11 +153,17 @@ main {
 
 .plan-price {
     font-size: .8em;
+    opacity: 60%;
 }
 
 .summary-change-plan a {
     font-size: .8em;
     text-decoration: underline;
+}
+
+.summary-change-plan a:hover {
+  text-decoration: none;
+  color: var(--desat-blue);
 }
 
 .summary-close {
@@ -160,7 +175,7 @@ main {
 }
 
 .proceed {
-  padding: 1em 4em;
+  padding: .75em 4em;
   margin-bottom: 1em;
   color: white;
   font-weight: 700;
@@ -170,10 +185,46 @@ main {
   box-shadow: 0 .75em .5em var(--pale-blue)
 }
 
+.proceed:hover {
+  background-color: var(--bright-blue);
+  opacity: 65%;
+}
+
 .cancel {
   padding-top: 1em;
+  font-weight: 700;
+  color: black;
+  opacity: 60%;
+}
+
+.cancel:hover {
+  font-weight: 900;
+  opacity: 100%;
 }
 
 a {
   text-decoration: inherit;
 }
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  margin: .5 auto; 
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+
+@media (max-width: 400p x) {
+  body {
+    background-image: url(./images/pattern-background-mobile.svg);
+  }
+}
+
+
+
