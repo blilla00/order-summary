@@ -105,7 +105,6 @@ main {
     margin: 1em;   
     max-width: 24em;
     border-radius: 1em;
-    border: 1px solid black;
     background-color: white;
 }
 
@@ -135,11 +134,18 @@ main {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    margin: 1em;
+    margin: 2em;
     padding: 1em;
     border-radius: 1em;
     background-color: rgba(224, 232, 255, .25);        
+}
+
+.summary-change-plan img {
+  margin-right: 1.5em;
+} 
+
+.summary-change-plan a {
+  margin-left: 8em;
 }
 
 .plan-info {
@@ -175,8 +181,8 @@ main {
 }
 
 .proceed {
-  padding: .75em 4em;
-  margin-bottom: 1em;
+  margin: 0 2em;
+  padding: 1em 4em;
   color: white;
   font-weight: 700;
   background-color: var(--bright-blue);
@@ -218,7 +224,7 @@ a {
   color: hsl(228, 45%, 44%);
 }
 
-
+/* sets background image to the mobile version on screens 400px or smaller */
 
 @media (max-width: 400p x) {
   body {
