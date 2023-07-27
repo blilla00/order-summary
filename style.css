@@ -31,8 +31,8 @@ ol[role='list'] {
 html:focus-within {
   scroll-behavior: smooth;
 }
-
 /* Set core body defaults */
+
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
@@ -85,7 +85,7 @@ select {
 }
 
 body {
-    background-image: url(./images/pattern-background-desktop.svg);
+    background-image: url(./images/pattern-background-mobile.svg);
     background-repeat: no-repeat;
     background-size: contain; 
     background-color: var(--pale-blue);
@@ -103,7 +103,7 @@ main {
    /* 20em is the desired component width on mobile devices /*
    /* max-width: 20em; */
     margin: 1em;   
-    max-width: 24em;
+    max-width: 20em;
     border-radius: 1em;
     background-color: white;
 }
@@ -120,14 +120,14 @@ main {
 .summary-title {
     font-weight: 900;
    /* margin: .8em .8em 0 .8em; */
-    margin: 1.5em 3em;
+    margin: 1.5em 2%  ;
     margin-bottom: .5em;
 }
 
 .summary-tagline {
     font-weight: 500;
     opacity: 60%;
-    margin: 0 3em 1em;
+    margin: 0 2em 1em;
 }
 
 .summary-change-plan {
@@ -135,6 +135,7 @@ main {
     flex-direction: row;
     align-items: center;
     margin: 2em;
+    margin-bottom: 1em;;
     padding: 1em;
     border-radius: 1em;
     background-color: rgba(224, 232, 255, .25);        
@@ -145,7 +146,7 @@ main {
 } 
 
 .summary-change-plan a {
-  margin-left: 8em;
+  margin-left: 3em;
 }
 
 .plan-info {
@@ -181,8 +182,8 @@ main {
 }
 
 .proceed {
-  margin: 0 2em;
-  padding: 1em 4em;
+  margin: 0 1.5em;
+  padding: 1em 2.5em;
   color: white;
   font-weight: 700;
   background-color: var(--bright-blue);
@@ -197,7 +198,7 @@ main {
 }
 
 .cancel {
-  padding-top: 1em;
+  margin-top: 1em;
   font-weight: 700;
   color: black;
   opacity: 60%;
@@ -224,13 +225,20 @@ a {
   color: hsl(228, 45%, 44%);
 }
 
-/* sets background image to the mobile version on screens 400px or smaller */
+/* sets background image to the desktop version on screens 400px or larger */
 
-@media (max-width: 400p x) {
-  body {
-    background-image: url(./images/pattern-background-mobile.svg);
-  }
+@media only screen and (min-width: 425px) {
+ 
+ main {
+  max-width: 24em;  
+ }
+
+ .summary-change-plan a {
+  margin-left: 6em;
+ }
+
+ .proceed {
+  padding: 1em 4.5em;
+ }
+
 }
-
-
-
