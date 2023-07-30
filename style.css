@@ -81,7 +81,7 @@ select {
     --pale-blue: hsl(225, 100%, 94%);
     --bright-blue: hsl(245, 75%, 52%);
     --desat-blue: hsl(224, 23%, 55%);
-    --very-plae-blue: hsl(225, 100%, 98%);
+    --very-pale-blue: hsl(225, 100%, 98%);
 }
 
 body {
@@ -89,6 +89,7 @@ body {
     background-repeat: no-repeat;
     background-size: contain; 
     background-color: var(--pale-blue);
+    background-position: bottom;
     
     font-size: 16px;
     font-family: 'Red Hat Display', sans-serif;
@@ -100,12 +101,17 @@ body {
 }
 
 main {
-   /* 20em is the desired component width on mobile devices /*
-   /* max-width: 20em; */
+   /* 20em is the desired component width on mobile devices */
     margin: 1em;   
     max-width: 20em;
     border-radius: 1em;
     background-color: white;
+    box-shadow: 0 1em .5em var(--desat-blue);
+}
+
+.order-container {
+  width: 100%;
+  padding: 2em 2em 1em;  
 }
 
 .summary-hero img {
@@ -119,35 +125,27 @@ main {
 
 .summary-title {
     font-weight: 900;
-   /* margin: .8em .8em 0 .8em; */
-    margin: 1.5em 2%  ;
     margin-bottom: .5em;
 }
 
 .summary-tagline {
     font-weight: 500;
-    opacity: 60%;
-    margin: 0 2em 1em;
+    opacity: 60%; 
 }
 
 .summary-change-plan {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 2em;
-    margin-bottom: 1em;;
+    margin: 1em 0;
     padding: 1em;
     border-radius: 1em;
-    background-color: rgba(224, 232, 255, .25);        
+    background-color: rgba(224, 232, 255, .25);     
 }
 
 .summary-change-plan img {
   margin-right: 1.5em;
 } 
-
-.summary-change-plan a {
-  margin-left: 3em;
-}
 
 .plan-info {
     display: flex;
@@ -155,7 +153,8 @@ main {
 }
 
 .plan-name {
-    font-size: .8em;
+    font-size: 1em;
+    font-weight: 700;
 }
 
 .plan-price {
@@ -164,6 +163,7 @@ main {
 }
 
 .summary-change-plan a {
+    margin-left: 4em;
     font-size: .8em;
     text-decoration: underline;
 }
@@ -178,18 +178,17 @@ main {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 1em;   
 }
 
 .proceed {
-  margin: 0 1.5em;
-  padding: 1em 2.5em;
+  width: 100%;
+  padding: .5em;
   color: white;
   font-weight: 700;
   background-color: var(--bright-blue);
-  border-radius: 1em;
+  border-radius: .5em;
   text-align: center;
-  box-shadow: 0 .75em .5em var(--pale-blue)
+  box-shadow: 0 .75em .5em var(--pale-blue);
 }
 
 .proceed:hover {
@@ -228,17 +227,18 @@ a {
 /* sets background image to the desktop version on screens 400px or larger */
 
 @media only screen and (min-width: 425px) {
- 
+
+ body {
+  background-image: url(./images/pattern-background-desktop.svg);
+ }
+
  main {
-  max-width: 24em;  
+  max-width: 24em;
  }
 
- .summary-change-plan a {
-  margin-left: 6em;
+ .order-container {
+  max-width: 500px;
  }
 
- .proceed {
-  padding: 1em 4.5em;
- }
-
+ 
 }
