@@ -85,11 +85,10 @@ select {
 }
 
 body {
-    background-image: url(./images/pattern-background-mobile.svg);
-    background-size: contain;  
+    background-image: url(./images/pattern-background-mobile.svg);  
     background-color: var(--pale-blue); 
     background-repeat: repeat-x;
-    background-position: top;
+    background-size: 100% 40%;
 
     font-size: 16px;
     font-family: 'Red Hat Display', sans-serif;
@@ -153,18 +152,18 @@ main {
 }
 
 .plan-name {
-    font-size: 1em;
+    font-size: .7rem;
     font-weight: 700;
 }
 
 .plan-price {
-    font-size: .8em;
+    font-size: .5rem;
     opacity: 60%;
 }
 
 .summary-change-plan a {
     margin-left: 4em;
-    font-size: .8em;
+    font-size: .6rem;
     text-decoration: underline;
 }
 
@@ -210,7 +209,7 @@ main {
 
 a {
   text-decoration: inherit;
-  font-size: 11px;
+  font-size: .75rem;
 }
 
 .attribution {
@@ -226,19 +225,18 @@ a {
 
 /* sets background image to the desktop version on screens 400px or larger */
 
-@media only screen and (min-width: 425px) {
+@media only screen and (min-width: 30rem) {
 
  body {
   background-image: url(./images/pattern-background-desktop.svg);
-  background-position: top;
  }
 
  main {
   max-width: 24em;
- }q
+ }
 
  .order-container {
-  max-width: 500px;
+  max-width: 45rem;
  }
 
  
